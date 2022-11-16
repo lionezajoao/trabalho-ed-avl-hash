@@ -4,22 +4,21 @@ using namespace std;
 
 class Hash
 {
-	int BUCKET; // No. of buckets
+	int tamanho; // Tamanho da hash
+	list<int> *lista;
 
-	// Pointer to an array containing buckets
-	list<int> *table;
 public:
 	Hash(int V); // Constructor
 
-	// inserts a key into hash table
-	void insertItem(int x);
+	// inserts a key into hash lista
+	void inserir_dado(int x);
 
-	// deletes a key from hash table
-	void deleteItem(int key);
+	// deletes a key from hash lista
+	void apagar_dado(int key);
 
 	// hash function to map values to key
-	int hashFunction(int x) {
-		return (x % BUCKET);
+	int funcao_hash(int x) {
+		return (x % tamanho);
 	}
 
 	void displayHash();
@@ -27,63 +26,41 @@ public:
 
 Hash::Hash(int b)
 {
-	this->BUCKET = b;
-	table = new list<int>[BUCKET];
+	this->tamanho = b;
+	lista = new list<int>[tamanho];
 }
 
-void Hash::insertItem(int key)
+void Hash::inserir_dado(int key)
 {
-	int index = hashFunction(key);
-	table[index].push_back(key);
+	int index = funcao_hash(key);
+	lista[index].push_back(key);
 }
 
-void Hash::deleteItem(int key)
+void Hash::apagar_dado(int key)
 {
-// get the hash index of key
-int index = hashFunction(key);
+	// get the hash index of key
+	int index = funcao_hash(key);
 
-// find the key in (index)th list
-list <int> :: iterator i;
-for (i = table[index].begin();
-		i != table[index].end(); i++) {
-	if (*i == key)
-	break;
+	// find the key in (index)th list
+	list <int> :: iterator i;
+	for (i = lista[index].begin();i != lista[index].end(); i++) {
+		if (*i == key)
+		break;
+	}
+
+	// if key is found in hash lista, remove it
+	if (i != lista[index].end())
+		lista[index].erase(i);
 }
 
-// if key is found in hash table, remove it
-if (i != table[index].end())
-	table[index].erase(i);
-}
-
-// function to display hash table
+// function to display hash lista
 void Hash::displayHash() {
-for (int i = 0; i < BUCKET; i++) {
-	cout << i;
-	for (auto x : table[i])
-	cout << " --> " << x;
-	cout << endl;
+	for (int i = 0; i < tamanho; i++) {
+		cout << i;
+		for (auto x : lista[i])
+		cout << " --> " << x;
+		cout << endl;
+	}
 }
-}
 
-// Driver program
-int main()
-{
-// array that contains keys to be mapped
-int a[] = {15, 11, 27, 8, 12};
-int n = sizeof(a)/sizeof(a[0]);
-
-// insert the keys into the hash table
-Hash h(7); // 7 is count of buckets in
-			// hash table
-for (int i = 0; i < n; i++)
-	h.insertItem(a[i]);
-
-// delete 12 from hash table
-h.deleteItem(12);
-
-// display the Hash table
-h.displayHash();
-
-return 0;
-}
 
