@@ -5,6 +5,8 @@
 // função para criar e popular listas com valores de 0 a 99
 auto populate(int size){
     vector<int> lista;
+    srand((unsigned)time(NULL));
+
     for (int loop = 0; loop < size; loop++)
     {
         int valor = rand() % 100;
