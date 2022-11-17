@@ -1,17 +1,21 @@
 #include <stdio.h>
+#include <iostream>
+#include <chrono>
 
-template <typename T>
-class cronometro
-{
-public:
-    auto inicio;
-    auto fim;
-    cronometro(){
-        inicio = std::chrono::high_resolution_clock::now();
-    }
-    void fim(){
-        fim = std::chrono::high_resolution_clock::now();
-        std::chrono::duration<double, std::milli> float_ms = fim - inicio;
-        std::cout << "Essa função durou " << float_ms.count() << " milisegundos." << std::endl;
-    }
+using namespace std;
+using chronoType = chrono::time_point<std::chrono::high_resolution_clock>;
+
+class Cronometro {
+    public:
+        chronoType init;
+        Cronometro(){
+            init = setTime();
+        };
+        chronoType setTime(){
+            return chrono::high_resolution_clock::now();
+        };
+
+        double getTimeDelta(chronoType init, chronoType end) {
+            return chrono::duration<double>(end - init).count();
+        };
 };
