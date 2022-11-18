@@ -18,10 +18,10 @@ auto populate(int size){
 void teste_insercao(int quantidade_de_elementos, int tamanho_hash){
     Cronometro time;
 
-    vector valores = populate(quantidade_de_elementos); // já cria o vetor dentro do teste
+    vector<int> valores = populate(quantidade_de_elementos); // já cria o vetor dentro do teste
 
     // inicio do cronometro de inserção
-    auto init = time.init;
+    auto init = time.setTime();
 
     Hash tabela_hash(tamanho_hash);
 
@@ -34,7 +34,7 @@ void teste_insercao(int quantidade_de_elementos, int tamanho_hash){
     auto end = time.setTime();
     double calc = time.getTimeDelta(init, end); // Calculando em segundos
 
-    cout << "O processo de insersão durou " << calc << " segundos." << endl;
+    cout << "O processo de inserção durou " << calc << " milisegundos." << endl;
 
     tabela_hash.displayHash();
     
