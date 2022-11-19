@@ -34,19 +34,18 @@ void teste_insercao(int quantidade_de_elementos, int tamanho_hash){
     auto end = time.setTime();
     double calc = time.getTimeDelta(init, end); // Calculando em segundos
 
-    cout << quantidade_de_elementos << " elementos inseridos em um hash de tamanho " << tamanho_hash << " levaram " << calc << " milisegundos para serem inseridos." << endl;
-
+    // cout << quantidade_de_elementos << " elementos inseridos em um hash de tamanho " << tamanho_hash << " levaram " << calc << " milisegundos para serem inseridos." << endl;
+    cout << calc << endl;
     // tabela_hash.displayHash();
     
 }
 
-int main(){
-    
-    teste_insercao(1000,10000);
-    teste_insercao(10000,100000);
-    teste_insercao(100000,1000000);
-    teste_insercao(1000000,10000000);
-    teste_insercao(10000000,100000000);
+int main(int argc, char *argv[]){
+
+    int elem = atoi(argv[0]);
+    int hash_size = atoi(argv[1]);
+
+    teste_insercao(elem, hash_size);
 
     return 0;
 }
