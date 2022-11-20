@@ -15,7 +15,7 @@ auto populate(int size){
     return lista;
 }
 
-void teste_insercao(int quantidade_de_elementos, int tamanho_hash){
+double teste_insercao(int quantidade_de_elementos, int tamanho_hash){
     Cronometro time;
 
     vector<int> valores = populate(quantidade_de_elementos); // já cria o vetor dentro do teste
@@ -35,17 +35,22 @@ void teste_insercao(int quantidade_de_elementos, int tamanho_hash){
     double calc = time.getTimeDelta(init, end); // Calculando em segundos
 
     // cout << quantidade_de_elementos << " elementos inseridos em um hash de tamanho " << tamanho_hash << " levaram " << calc << " milisegundos para serem inseridos." << endl;
-    cout << calc << endl;
     // tabela_hash.displayHash();
+    return calc;
     
 }
 
 int main(int argc, char *argv[]){
 
-    int elem = atoi(argv[0]);
-    int hash_size = atoi(argv[1]);
+    int elem = atoi(argv[1]);
+    int hash_size = elem*10;
 
-    teste_insercao(elem, hash_size);
+    double total = 0.0;
+    for (int i=0; i<5; i++) {
+        total += teste_insercao(elem, hash_size);
+    }
+    
+    cout << total/5.0 << endl;
 
     return 0;
 }
