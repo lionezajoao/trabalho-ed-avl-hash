@@ -4,21 +4,18 @@ using namespace std;
 
 class Hash
 {
-	int tamanho; // Tamanho da hash
+	int tamanho;
 	list<int> *lista;
 
 public:
-	Hash(int V); // Constructor
+	Hash(int V);
 
-	// inserts a key into hash lista
-	void inserir_dado(int x);
+	void inserir_dado(int val);
 
-	// deletes a key from hash lista
-	void apagar_dado(int key);
+	void apagar_dado(int val);
 
-	// hash function to map values to key
-	int funcao_hash(int x) {
-		return (x % tamanho);
+	int funcao_hash(int val) {
+		return (val % tamanho);
 	}
 
 	void displayHash();
@@ -30,30 +27,26 @@ Hash::Hash(int b)
 	lista = new list<int>[tamanho];
 }
 
-void Hash::inserir_dado(int key)
+void Hash::inserir_dado(int val)
 {
-	int index = funcao_hash(key);
-	lista[index].push_back(key);
+	int index = funcao_hash(val);
+	lista[index].push_back(val);
 }
 
-void Hash::apagar_dado(int key)
+void Hash::apagar_dado(int val)
 {
-	// get the hash index of key
-	int index = funcao_hash(key);
+	int index = funcao_hash(val);
 
-	// find the key in (index)th list
 	list <int> :: iterator i;
 	for (i = lista[index].begin();i != lista[index].end(); i++) {
-		if (*i == key)
+		if (*i == val)
 		break;
 	}
 
-	// if key is found in hash lista, remove it
 	if (i != lista[index].end())
 		lista[index].erase(i);
 }
 
-// function to display hash lista
 void Hash::displayHash() {
 	for (int i = 0; i < tamanho; i++) {
 		cout << i;

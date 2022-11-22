@@ -8,7 +8,7 @@ exec_script() {
 
     avg=$(./bin/$script_name $elem)
 
-    echo "Média de tempo para $elem elementos e hash de tamanho $((elem*10)) é $avg milisegundos"
+    echo $avg
 }
 
 ## MAIN

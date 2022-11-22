@@ -1,0 +1,29 @@
+100 elementos e hash de tamanho 1000
+Tempo de inserção de todos os valores na hash: 0.007383
+Menor tempo de remoção da hash: 7e-05
+Maior tempo de remoção da hash: 0.000581
+Tempo médio de remoção da hash: 7.974e-05
+
+1000 elementos e hash de tamanho 10000
+Tempo de inserção de todos os valores na hash: 0.068017
+Menor tempo de remoção da hash: 7e-05
+Maior tempo de remoção da hash: 0.000641
+Tempo médio de remoção da hash: 7.3249e-05
+
+10000 elementos e hash de tamanho 100000
+Tempo de inserção de todos os valores na hash: 1.25917
+Menor tempo de remoção da hash: 0.00013
+Maior tempo de remoção da hash: 0.001423
+Tempo médio de remoção da hash: 0.000139498
+
+100000 elementos e hash de tamanho 1000000
+Tempo de inserção de todos os valores na hash: 6.56704
+Menor tempo de remoção da hash: 6e-05
+Maior tempo de remoção da hash: 0.006723
+Tempo médio de remoção da hash: 7.00858e-05
+
+1000000 elementos e hash de tamanho 10000000
+Tempo de inserção de todos os valores na hash: 66.2392
+Menor tempo de remoção da hash: 6e-05
+Maior tempo de remoção da hash: 0.018655
+Tempo médio de remoção da hash: 7.85533e-05
