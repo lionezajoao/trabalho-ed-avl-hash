@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-## MEDIAN TIME
+## EXEC
 
 exec_script() {
     elem=$1
@@ -13,8 +13,6 @@ exec_script() {
 
 ## MAIN
 
-clear
-
 script_path="$(cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P)"
 script_name="hash"
 
@@ -25,7 +23,7 @@ echo "RUNNING"
 
 init_elem_size=1000
 
-# Quantidade de elementos de 100 até 10.000.000
+# Quantidade de elementos de 1000 até 100.000.000
 for i in $(seq 1 5);
 do
     exec_script $init_elem_size
