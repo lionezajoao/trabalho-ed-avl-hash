@@ -34,7 +34,7 @@ void teste_insercao_busca(int quantidade_de_elementos, int tamanho_hash){
     auto fimInsercao = time.setTime();
     double tempoInsercao = time.getTimeDelta(inicioInsercao, fimInsercao); // Calculando em milisegundos
 
-    cout << "Tempo de inserção de todos os valores na hash: " << tempoInsercao << endl;
+    cout << "Tempo de inserção de todos os valores na hash: " << tempoInsercao << " segundos" << endl;
 
     auto menorTempoRemocao = 0.0;
     auto maiorTempoRemocao = 0.0;
@@ -64,9 +64,9 @@ void teste_insercao_busca(int quantidade_de_elementos, int tamanho_hash){
 
     tempoMedioRemocao = tempoMedioRemocao/tamVetor;
 
-    cout << "Menor tempo de busca e remoção da hash: " << menorTempoRemocao << endl;
-    cout << "Maior tempo de busca e remoção da hash: " << maiorTempoRemocao << endl;
-    cout << "Tempo médio de busca e remoção da hash: " << tempoMedioRemocao  << endl;
+    cout << "Menor tempo de busca e remoção da hash: " << menorTempoRemocao << " segundos" << endl;
+    cout << "Maior tempo de busca e remoção da hash: " << maiorTempoRemocao << " segundos" << endl;
+    cout << "Tempo médio de busca e remoção da hash: " << tempoMedioRemocao << " segundos" << endl;
     cout << '\a' << endl;
     
 }

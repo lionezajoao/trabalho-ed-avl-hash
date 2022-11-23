@@ -13,6 +13,6 @@ class Cronometro {
         };
 
         double getTimeDelta(chronoType init, chronoType end) {
-            return chrono::duration<double, milli>(end - init).count();
+            return chrono::duration<double>(end - init).count();
         };
 };

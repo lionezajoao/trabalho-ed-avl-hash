@@ -21,11 +21,9 @@ script_name="hash"
 echo "COMPILING"
 g++ $script_path/hash.cpp -o $script_path/bin/$script_name
 
-echo $script_path/hash.cpp -o $script_path/bin/$script_name
-
 echo "RUNNING"
 
-init_elem_size=100
+init_elem_size=1000
 
 # Quantidade de elementos de 100 até 10.000.000
 for i in $(seq 1 5);
