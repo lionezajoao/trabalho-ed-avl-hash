@@ -78,12 +78,5 @@ int main(int argc, char *argv[]){
 
     teste_insercao_busca(elem, hash_size);
 
-    // double total = 0.0;
-    // for (int i=0; i<5; i++) {
-    //     total += teste_insercao(elem, hash_size);
-    // }
-    
-    // cout << response << endl;
-
     return 0;
 }
