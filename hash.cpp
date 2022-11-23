@@ -64,9 +64,9 @@ void teste_insercao_busca(int quantidade_de_elementos, int tamanho_hash){
 
     tempoMedioRemocao = tempoMedioRemocao/tamVetor;
 
-    cout << "Menor tempo de remoção da hash: " << menorTempoRemocao << endl;
-    cout << "Maior tempo de remoção da hash: " << maiorTempoRemocao << endl;
-    cout << "Tempo médio de remoção da hash: " << tempoMedioRemocao  << endl;
+    cout << "Menor tempo de busca e remoção da hash: " << menorTempoRemocao << endl;
+    cout << "Maior tempo de busca e remoção da hash: " << maiorTempoRemocao << endl;
+    cout << "Tempo médio de busca e remoção da hash: " << tempoMedioRemocao  << endl;
     cout << '\a' << endl;
     
 }
