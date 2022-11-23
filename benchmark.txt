@@ -1,29 +1,29 @@
-100 elementos e hash de tamanho 1000
-Tempo de inserção de todos os valores na hash: 0.007383
-Menor tempo de remoção da hash: 7e-05
-Maior tempo de remoção da hash: 0.000581
-Tempo médio de remoção da hash: 7.974e-05
-
 1000 elementos e hash de tamanho 10000
-Tempo de inserção de todos os valores na hash: 0.068017
-Menor tempo de remoção da hash: 7e-05
-Maior tempo de remoção da hash: 0.000641
-Tempo médio de remoção da hash: 7.3249e-05
+Tempo de inserção de todos os valores na hash: 0.000155402 segundos
+Menor tempo de busca e remoção da hash: 1.3e-07 segundos
+Maior tempo de busca e remoção da hash: 1.323e-06 segundos
+Tempo médio de busca e remoção da hash: 1.37548e-07 segundos
 
 10000 elementos e hash de tamanho 100000
-Tempo de inserção de todos os valores na hash: 1.25917
-Menor tempo de remoção da hash: 0.00013
-Maior tempo de remoção da hash: 0.001423
-Tempo médio de remoção da hash: 0.000139498
+Tempo de inserção de todos os valores na hash: 0.00128634 segundos
+Menor tempo de busca e remoção da hash: 1.3e-07 segundos
+Maior tempo de busca e remoção da hash: 1.453e-06 segundos
+Tempo médio de busca e remoção da hash: 1.5883e-07 segundos
 
 100000 elementos e hash de tamanho 1000000
-Tempo de inserção de todos os valores na hash: 6.56704
-Menor tempo de remoção da hash: 6e-05
-Maior tempo de remoção da hash: 0.006723
-Tempo médio de remoção da hash: 7.00858e-05
+Tempo de inserção de todos os valores na hash: 0.012495 segundos
+Menor tempo de busca e remoção da hash: 6e-08 segundos
+Maior tempo de busca e remoção da hash: 3.5197e-05 segundos
+Tempo médio de busca e remoção da hash: 1.22642e-07 segundos
 
 1000000 elementos e hash de tamanho 10000000
-Tempo de inserção de todos os valores na hash: 66.2392
-Menor tempo de remoção da hash: 6e-05
-Maior tempo de remoção da hash: 0.018655
-Tempo médio de remoção da hash: 7.85533e-05
+Tempo de inserção de todos os valores na hash: 0.0671662 segundos
+Menor tempo de busca e remoção da hash: 6e-08 segundos
+Maior tempo de busca e remoção da hash: 2.7051e-05 segundos
+Tempo médio de busca e remoção da hash: 8.21484e-08 segundos
+
+10000000 elementos e hash de tamanho 100000000
+Tempo de inserção de todos os valores na hash: 0.683833 segundos
+Menor tempo de busca e remoção da hash: 6e-08 segundos
+Maior tempo de busca e remoção da hash: 4.0566e-05 segundos
+Tempo médio de busca e remoção da hash: 9.40668e-08 segundos
